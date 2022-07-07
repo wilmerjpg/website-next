@@ -1,17 +1,17 @@
-// import { useEffect } from 'react';
-// import TagManager from 'react-gtm-module';
+import { useEffect } from 'react';
+import TagManager from 'react-gtm-module';
 import Script from 'next/script'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
-  // useEffect(() => {
-  //   TagManager.initialize({ gtmId: 'G-YHPFPHLDG4' });
-  //   console.log("Initialized")
-  // }, []);
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'G-YHPFPHLDG4' });
+    console.log("Initialized")
+  }, []);
 
   return (
     <>
-      <Script
+      {/* <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-YHPFPHLDG4"
         strategy="afterInteractive"
       />
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
 
           gtag('config', 'G-YHPFPHLDG4');
         `}
-      </Script>
+      </Script> */}
       <Component {...pageProps} />
     </>
   )
